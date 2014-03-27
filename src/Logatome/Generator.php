@@ -30,7 +30,7 @@ class Generator {
      * @param int $seed The seed for the logatome generation, this will determine the maximum length of substrings to use in algorithm
      * @param string $wordFile The path to the file of words to use for generation
      */
-    public function __construct($seed = 3, $wordFile) {
+    public function __construct($wordFile = "EnglishWords.txt", $seed = 3) {
         $this->seed = $seed;
         $this->wordFile = $wordFile;
         $this->loadWordList();
@@ -151,9 +151,10 @@ class Generator {
     public function debug() {
         echo $this->generateWord();
     }
+    
+    public function getWordFile() {
+        return $this->wordFile;
+    }
 
 }
-
-$test = new Generator(3, "EnglishWords.txt");
-$test->debug();
 ?>

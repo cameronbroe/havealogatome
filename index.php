@@ -42,21 +42,25 @@
     </head>
     <body>
         <!-- Position of this element is for the overlay while generating the word -->
-        <div id="generatingMessage"><div id="centerText"><div id="fullBlack"">Generating word(s)...please wait</div><br /><img id="loadingImg" src="./img/loading.gif" /></div></div>
+        <div id="generatingMessage"><div id="centerText"><div id="fullBlack"">Generating word...please wait</div><br /><img id="loadingImg" src="./img/loading.gif" /></div></div>
 
         <div id="wrapper">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Have A Logatome!</a>
+                    <a class="navbar-brand" style="color: #3399FF;">Have A Logatome!</a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Source</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="http://github.com/cameronbroe/havealogatome">Source</a></li>
                 </ul>
                 </div>
             </nav>
             <div class="container-fluid main-page-bg">
+                <div class="jumbotron">
+                    <h1>logatome - n.</h1>
+                    <p>a fake word with no actual meaning that can be pronounced</p>
+                </div>
                 <form id="options">
                     <div class="row push-button-below">
                         <div class="col-md-2 col-md-offset-3 seedLabel">Generator Seed:</div>
@@ -73,11 +77,11 @@
                 <br /><br />
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4">
-                        <div id="generatedWord"><div id="word"></div></div>
+                        <div id="generatedWord" style="width: 400px;"><div id="word"></div></div>
                     </div>
                 </div>
 
-                <footer style="width: 100%; text-align: center;">
+                <footer style="width: 100%; text-align: center; margin-top: 200px;">
                     Copyright &copy; 2015 Cameron Roe
                 </footer>
             </div>

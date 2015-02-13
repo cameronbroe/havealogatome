@@ -5,8 +5,16 @@ html body {
 
 body {
     margin: 0;
-    background-color: #333333;
-    color: #000000;
+    background-color: #3399FF;
+    color: #3399FF !important;
+}
+
+nav {
+    color: #3399FF;
+}
+
+.jumbotron {
+    color: #3399FF;
 }
 
 form input {
@@ -25,7 +33,7 @@ form input {
 }
 
 .navbar-brand {
-    font-size: 30px;
+    font-size: 42px;
 }
 
 .push-button-below {
@@ -93,4 +101,9 @@ form input {
 #word {
     font-size: 42px;
     margin-bottom: 50px;
+}
+
+.navbar {
+    padding-top: 15px;
+    min-height: 80px;
 }

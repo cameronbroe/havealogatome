@@ -1,6 +1,7 @@
 html body {
     height: 100%;
     width: 100%;
+    font-family: "Chewy", cursive;
 }
 
 body {
@@ -16,6 +17,8 @@ nav {
 
 .jumbotron {
     color: #3399FF;
+    border: dashed 2px #3399FF;
+    border-radius: 4px;
 }
 
 form input {
@@ -35,6 +38,7 @@ form input {
 
 .navbar-brand {
     font-size: 42px;
+    text-shadow: 3px 2px 2px #AAAAFF;
 }
 
 .push-button-below {
@@ -55,14 +59,18 @@ form input {
     position: relative;
     z-index: 1;
     overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #centerText {
+    margin: 5px 5px 5px 5px;
     padding: 10px 0px 10px 0px;
-    border: double #888888;
+    border: dashed 2px #3399FF;
+    border-radius: 4px;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 30%;
+    transform: translateY(-70%);
     margin-left: auto;
     margin-right: auto;
     width: 250px;
@@ -82,9 +90,9 @@ form input {
     width: 100%;
     height: 100%;
     margin: 0px auto;
-    background-color: #000000;
+    /*background-color: #000000;*/
     color: #000000;
-    opacity: .8;
+    opacity: 1;
 }
 
 #loadingImg {

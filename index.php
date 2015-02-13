@@ -7,7 +7,8 @@
         <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.3/themes/ui-darkness/jquery-ui.css">
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script src="//code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
         <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
         <script type="text/javascript">
@@ -88,9 +89,9 @@
                 </form>
                 <br /><br />
                 <div class="row">
-                    <div class="col-md-4 col-md-offset-4">
-                        <div id="generatedWord" style="width: 400px;"><div id="word"></div></div>
-                    </div>
+                    <!-- <div class="col-md-4 col-md-offset-4"> -->
+                        <div id="generatedWord" style=""><div id="word"></div></div>
+                    <!-- </div> -->
                 </div>
 
                 <footer style="width: 100%; text-align: center; margin-top: 200px;">

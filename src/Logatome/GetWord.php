@@ -33,7 +33,8 @@
 	$data = array(
 	    'word' => $word,
 	    'fileName' => $generator->getWordFile(),
-	    'seed' => $generator->getSeed()
+	    'seed' => $generator->getSeed(),
+	    'cwd' => getcwd()
 	);
 	echo json_encode($data);
 ?>

@@ -6,23 +6,32 @@
         <title>Have a Logatome!</title>
         <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.3/themes/ui-darkness/jquery-ui.css">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
+        <script src="//code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
         <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
                 $("#seedValue").html($("#seedParam").val());
                 $("#generatingMessage").hide();
 
-                $("#seedParam").change(function() {
-                   $("#seedValue").html($("#seedParam").val());
+                $("#seedParam").slider({
+                    value: 3,
+                    min: 1,
+                    max: 20,
+                    step: 1,
+                    slide: function(event, ui) {
+                        $("#seedValue").html(ui.value);
+                    }
                 });
+
+                $("#seedValue").html($("#seedParam").slider("value"));
 
                 $("#genWord").click(function() {
                     $("#generatingMessage").show();
 
                     // Get form data to send through GET
-                    var seedValue = $("#seedParam").val();
+                    var seedValue = $("#seedParam").slider("value");
 
                     $.ajax({
                         type: "GET",
@@ -63,9 +72,12 @@
                 </div>
                 <form id="options">
                     <div class="row push-button-below">
-                        <div class="col-md-2 col-md-offset-3 seedLabel">Generator Seed:</div>
+                        <div class="col-md-2 col-md-offset-3 seedLabel">
+                            <div class="col-xs-2">Seed:</div>
+                            <div class="col-xs-1 col-xs-offset-2"><div id="seedValue"></div></div>
+                        </div>
                         <div class="col-md-4">
-                            <input type="range" id="seedParam" name="seedParam" min="1" max="20" value="3" /><div id="seedValue"></div>
+                            <div id="seedParam"></div>
                         </div>
                     </div>
                     <div class="row">

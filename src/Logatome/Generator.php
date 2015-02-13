@@ -156,5 +156,17 @@ class Generator {
         return $this->wordFile;
     }
 
+    public function getSeed() {
+        return $this->seed;
+    }
+
+    public function setWordFile($file) {
+        $this->wordFile = $file;
+    }
+
+    public function setSeed($seed) {
+        return $this->seed = $seed;
+    }
+
 }
 ?>
